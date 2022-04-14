@@ -36,3 +36,10 @@ Once submitted, the bot will:
 1. Post the message in the selected channel.
 2. Add an initial emoji reaction to the message for each reaction role.
 3. Monitor for users to add a reaction and give the user the corresponding role.
+
+## Inspiration
+
+The general design and structure of the `bot` package and its code is inspired
+in many ways by @MarcusOtter and his
+[`discord-needle`](https://github.com/MarcusOtter/discord-needle) bot, which is
+written in a style that I like very much and feel at home in :heart:
