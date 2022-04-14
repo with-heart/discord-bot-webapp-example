@@ -3,7 +3,14 @@ lockfileVersion: 5.3
 importers:
 
   .:
-    specifiers: {}
+    specifiers:
+      '@tsconfig/node16-strictest': ^1.0.1
+      '@types/node': ^17.0.24
+      typescript: ^4.6.3
+    dependencies:
+      '@tsconfig/node16-strictest': 1.0.1
+      '@types/node': 17.0.24
+      typescript: 4.6.3
 
   bot:
     specifiers:
@@ -11,10 +18,7 @@ importers:
       '@discordjs/rest': ^0.3.0
       '@swc/core': ^1.2.165
       '@swc/register': ^0.1.10
-      '@tsconfig/node16-strictest': ^1.0.1
-      '@types/node': ^17.0.24
       discord.js: ^13.6.0
-      typescript: ^4.6.3
     dependencies:
       '@discordjs/builders': 0.12.0
       '@discordjs/rest': 0.3.0
@@ -22,9 +26,9 @@ importers:
     devDependencies:
       '@swc/core': 1.2.165
       '@swc/register': 0.1.10_@swc+core@1.2.165
-      '@tsconfig/node16-strictest': 1.0.1
-      '@types/node': 17.0.24
-      typescript: 4.6.3
+
+  db:
+    specifiers: {}
 
 packages:
 
@@ -236,7 +240,7 @@ packages:
 
   /@tsconfig/node16-strictest/1.0.1:
     resolution: {integrity: sha512-VN0sa4DUljguhKIEbdIP2NqcYoC6OuLM9rrPb53PwnFJiBRwakpLH0k0Qp3gqcQxb6H4wtL4A6VGhFwL5DTf2A==}
-    dev: true
+    dev: false
 
   /@types/node-fetch/2.6.1:
     resolution: {integrity: sha512-oMqjURCaxoSIsHSr1E47QHzbmzNR5rK8McHuNb11BOM9cHcIK3Avy0s/b2JlXHoQGTYS3NsvWzV1M0iK7l0wbA==}
@@ -247,6 +251,7 @@ packages:
 
   /@types/node/17.0.24:
     resolution: {integrity: sha512-aveCYRQbgTH9Pssp1voEP7HiuWlD2jW2BO56w+bVrJn04i61yh6mRfoKO6hEYQD9vF+W8Chkwc6j1M36uPkx4g==}
+    dev: false
 
   /@types/ws/8.5.3:
     resolution: {integrity: sha512-6YOoWjruKj1uLf3INHH7D3qTXwFfEsg1kf3c0uDdSBJwfa/llkwIjrAGV7j7mVgGNbzTQ3HiHKKDXl6bJPD97w==}
@@ -377,7 +382,7 @@ packages:
     resolution: {integrity: sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
+    dev: false
 
   /webidl-conversions/3.0.1:
     resolution: {integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=}
