@@ -1,0 +1,20 @@
+*.log*
+
+# dependencies
+node_modules
+
+# sensitive files
+.env
+bot/config.json
+
+# build
+dist
+.next
+
+# editors
+.vscode
+.idea
+*.iml
+
+# os bs
+.DS_Store
