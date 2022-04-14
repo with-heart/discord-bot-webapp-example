@@ -13,13 +13,11 @@ importers:
       '@swc/register': ^0.1.10
       '@tsconfig/node16-strictest': ^1.0.1
       '@types/node': ^17.0.24
-      discord-api-types: ^0.31.1
       discord.js: ^13.6.0
       typescript: ^4.6.3
     dependencies:
       '@discordjs/builders': 0.12.0
       '@discordjs/rest': 0.3.0
-      discord-api-types: 0.31.1
       discord.js: 13.6.0
     devDependencies:
       '@swc/core': 1.2.165
@@ -279,10 +277,6 @@ packages:
   /discord-api-types/0.26.1:
     resolution: {integrity: sha512-T5PdMQ+Y1MEECYMV5wmyi9VEYPagEDEi4S0amgsszpWY0VB9JJ/hEvM6BgLhbdnKky4gfmZEXtEEtojN8ZKJQQ==}
     engines: {node: '>=12'}
-    dev: false
-
-  /discord-api-types/0.31.1:
-    resolution: {integrity: sha512-QBWl1/x20ZyKAiY750wuWAWokudhlOnQzXhCTEkQsCNOOM9tU/HIqkpLgZqJI1EFmZMeWHdaRKzpiD7n7iCS+w==}
     dev: false
 
   /discord.js/13.6.0:
