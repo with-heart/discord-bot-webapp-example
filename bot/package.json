@@ -3,9 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "node -r @swc/register src/index.ts"
+    "deploy": "pnpm run swc scripts/deploy-commands.ts",
+    "dev": "pnpm run swc src/index.ts",
+    "swc": "node -r @swc/register"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.31.1",
+    "discord.js": "^13.6.0"
+  },
   "devDependencies": {
     "@swc/core": "^1.2.165",
     "@swc/register": "^0.1.10",
