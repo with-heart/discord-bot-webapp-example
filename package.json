@@ -1,0 +1,15 @@
+{
+  "name": "discord-bot-webapp-example",
+  "private": true,
+  "author": "with-heart <with.heart+git@pm.me>",
+  "description": "An example of a Discord bot backed by a webapp",
+  "keywords": [
+    "discord",
+    "discordjs",
+    "discord-bot"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
