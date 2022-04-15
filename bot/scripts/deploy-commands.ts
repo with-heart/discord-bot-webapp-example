@@ -1,6 +1,7 @@
+import type {SlashCommandBuilder} from '@discordjs/builders'
 import {REST} from '@discordjs/rest'
 import {Routes} from 'discord-api-types/v9'
-import {getApplicationId, getGuildId, getToken} from '../src/env'
+import {getApplicationId, getGuildId, getToken} from '../src/environment'
 
 /*
 
@@ -24,9 +25,9 @@ const token = getToken()
 const applicationId = getApplicationId()
 const guildId = getGuildId()
 
-const commands: any[] = []
+const commands: SlashCommandBuilder[] = []
 
-;(async () => {
+void (async () => {
   // initialize discord rest client using our token
   const rest = new REST({version: '9'}).setToken(token)
 
