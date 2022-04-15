@@ -12,6 +12,17 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:unicorn/recommended'],
   rules: {
     'unicorn/no-array-reduce': ['error', {allowSimpleOperations: true}],
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        replacements: {
+          args: {
+            arguments: false,
+          },
+        },
+        checkFilenames: false,
+      },
+    ],
   },
   overrides: [
     {
@@ -21,13 +32,14 @@ module.exports = {
       },
     },
     {
-      files: ['*.ts'],
+      files: ['*.ts', '*.tsx'],
+      excludedFiles: 'webapp/**',
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
       parserOptions: {
-        project: ['./tsconfig.eslint.json', tsc('bot')],
+        project: ['./tsconfig.eslint.json', tsc('bot'), tsc('webapp')],
         tsConfigRootDir: __dirname,
       },
       rules: {
