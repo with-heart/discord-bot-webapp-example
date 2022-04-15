@@ -19,6 +19,9 @@ module.exports = {
           args: {
             arguments: false,
           },
+          db: {
+            database: false,
+          },
         },
         checkFilenames: false,
       },

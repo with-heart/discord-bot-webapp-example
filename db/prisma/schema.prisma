@@ -1,0 +1,31 @@
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Guild {
+  id            Int            @id @default(autoincrement())
+  snowflake     String
+  reactionRoles ReactionRole[]
+}
+
+model ReactionRole {
+  id      Int                  @id @default(autoincrement())
+  guildId Int
+  guild   Guild                @relation(fields: [guildId], references: [id])
+  text    String
+  channel String
+  options ReactionRoleOption[]
+}
+
+model ReactionRoleOption {
+  id             Int          @id @default(autoincrement())
+  role           String
+  emoji          String
+  reactionRoleId Int
+  reactionRole   ReactionRole @relation(fields: [reactionRoleId], references: [id])
+}
