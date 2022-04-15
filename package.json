@@ -10,7 +10,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@tsconfig/node16-strictest": "^1.0.1",
@@ -21,6 +22,14 @@
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-unicorn": "^42.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.2",
     "typescript": "^4.6.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,md,json,yml}": [
+      "eslint",
+      "prettier --write"
+    ]
   }
 }
