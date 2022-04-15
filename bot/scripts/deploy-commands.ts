@@ -1,8 +1,6 @@
 import {REST} from '@discordjs/rest'
 import {Routes} from 'discord-api-types/v9'
-import {clientId, guildId, token} from '../config.json'
-
-const commands: any[] = []
+import {getApplicationId, getGuildId, getToken} from '../src/env'
 
 /*
 
@@ -22,12 +20,18 @@ server immediately.
 
 */
 
+const token = getToken()
+const applicationId = getApplicationId()
+const guildId = getGuildId()
+
+const commands: any[] = []
+
 ;(async () => {
   // initialize discord rest client using our token
   const rest = new REST({version: '9'}).setToken(token)
 
   try {
-    await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
+    await rest.put(Routes.applicationGuildCommands(applicationId, guildId), {
       body: commands,
     })
     console.log('Successfully registered application commands.')

@@ -1,5 +1,5 @@
 import {Client, Intents} from 'discord.js'
-import {token} from '../config.json'
+import {getToken} from './env'
 import {events} from './events'
 import type {EventListener} from './types'
 
@@ -14,4 +14,4 @@ for (const event of events) {
   }
 }
 
-client.login(token)
+client.login(getToken())

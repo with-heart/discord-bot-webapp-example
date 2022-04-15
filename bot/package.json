@@ -5,7 +5,7 @@
   "scripts": {
     "deploy": "pnpm run swc scripts/deploy-commands.ts",
     "dev": "pnpm run swc src/index.ts",
-    "swc": "node -r @swc/register"
+    "swc": "DOTENV_CONFIG_PATH=../.env node -r @swc/register -r dotenv/config"
   },
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
