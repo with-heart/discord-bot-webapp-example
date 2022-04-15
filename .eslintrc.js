@@ -39,7 +39,12 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
       parserOptions: {
-        project: ['./tsconfig.eslint.json', tsc('bot'), tsc('webapp')],
+        project: [
+          './tsconfig.eslint.json',
+          tsc('bot'),
+          tsc('db'),
+          tsc('webapp'),
+        ],
         tsConfigRootDir: __dirname,
       },
       rules: {
