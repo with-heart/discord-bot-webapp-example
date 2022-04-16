@@ -35,7 +35,8 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint",
-    "*.{js,ts,tsx,md,json,yml}": "prettier --write"
+    "*.{js,ts,tsx,md,json,yml}": "prettier --write",
+    "*.prisma": "pnpm --filter db prisma format"
   },
   "workspaces": [
     "bot",
