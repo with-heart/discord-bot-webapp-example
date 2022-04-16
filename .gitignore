@@ -2,6 +2,8 @@
 *.db
 *.db-journal
 
+db/prisma/seed.ts
+
 # dependencies
 node_modules
 
