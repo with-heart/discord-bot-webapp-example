@@ -18,6 +18,7 @@
   "dependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-typescript": "^7.16.7",
+    "@changesets/cli": "^2.22.0",
     "@preconstruct/cli": "^2.1.5",
     "@swc/core": "^1.2.165",
     "@swc/register": "^0.1.10",
