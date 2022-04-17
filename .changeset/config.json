@@ -1,6 +1,9 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "changelog": [
+    "@changesets/changelog-github",
+    {"repo": "with-heart/discord-bot-webapp-example"}
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],
