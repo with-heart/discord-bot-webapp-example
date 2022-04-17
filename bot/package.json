@@ -10,10 +10,7 @@
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
     "@discordjs/rest": "^0.3.0",
+    "db": "workspace:*",
     "discord.js": "^13.6.0"
-  },
-  "devDependencies": {
-    "@swc/core": "^1.2.165",
-    "@swc/register": "^0.1.10"
   }
 }

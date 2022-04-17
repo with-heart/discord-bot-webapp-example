@@ -1,0 +1,19 @@
+{
+  "name": "db",
+  "version": "0.0.0",
+  "main": "dist/db.cjs.js",
+  "module": "dist/db.esm.js",
+  "private": true,
+  "scripts": {
+    "prisma": "DATABASE_URL=\"file:dev.db\" prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.12.0"
+  },
+  "devDependencies": {
+    "prisma": "^3.12.0"
+  },
+  "prisma": {
+    "seed": "node -r @swc/register prisma/seed.ts"
+  }
+}
