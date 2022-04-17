@@ -42,10 +42,12 @@ importers:
     specifiers:
       '@discordjs/builders': ^0.12.0
       '@discordjs/rest': ^0.3.0
+      db: workspace:*
       discord.js: ^13.6.0
     dependencies:
       '@discordjs/builders': 0.12.0
       '@discordjs/rest': 0.3.0
+      db: link:../db
       discord.js: 13.6.0
 
   db:
