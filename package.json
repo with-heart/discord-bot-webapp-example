@@ -13,7 +13,8 @@
     "build": "preconstruct build",
     "lint": "eslint . --ext .ts",
     "postinstall": "preconstruct dev",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "pnpm run build && pnpm changeset publish"
   },
   "dependencies": {
     "@babel/core": "^7.17.9",
