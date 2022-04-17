@@ -16,7 +16,7 @@ model Guild {
 model ReactionRole {
   id               Int                  @id @default(autoincrement())
   guildId          Int
-  guild            Guild                @relation(fields: [guildId], references: [id])
+  guild            Guild                @relation(fields: [guildId], references: [id], onDelete: Cascade)
   text             String
   channelSnowflake String
   messageSnowflake String?
@@ -29,5 +29,5 @@ model ReactionRoleOption {
   /// `emoji` is either a unicode emoji (built-in) or a `Snowflake` (custom)
   emoji          String
   reactionRoleId Int
-  reactionRole   ReactionRole @relation(fields: [reactionRoleId], references: [id])
+  reactionRole   ReactionRole @relation(fields: [reactionRoleId], references: [id], onDelete: Cascade)
 }
