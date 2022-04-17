@@ -12,6 +12,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:unicorn/recommended'],
   rules: {
     'unicorn/no-array-reduce': ['error', {allowSimpleOperations: true}],
+    'unicorn/no-null': 'off',
     'unicorn/prevent-abbreviations': [
       'error',
       {
