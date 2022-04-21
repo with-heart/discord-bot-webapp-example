@@ -19,7 +19,7 @@ model ReactionRole {
   guild            Guild                @relation(fields: [guildId], references: [id], onDelete: Cascade)
   text             String
   channelSnowflake String
-  messageSnowflake String?
+  messageSnowflake String?              @unique
   options          ReactionRoleOption[]
 }
 
