@@ -31,3 +31,12 @@ jobs:
           version: '6.32.8'
           run_install: |
             - args: [--frozen-lockfile, --strict-peer-dependencies]
+
+      - name: 'Create release PR or publish'
+        id: 'changesets'
+        uses: 'changesets/action@v1'
+        with:
+          publish: 'pnpm run release'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
