@@ -14,7 +14,7 @@
     "lint": "eslint . --ext .ts",
     "postinstall": "preconstruct dev",
     "prepare": "husky install",
-    "publish": "pnpm run build && pnpm changeset publish"
+    "release": "pnpm changeset tag && git push --follow-tags"
   },
   "dependencies": {
     "@babel/core": "^7.17.9",
