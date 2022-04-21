@@ -1,11 +1,7 @@
 import type {Awaitable, ClientEvents} from 'discord.js'
 
-export interface EventListener<Name extends keyof ClientEvents> {
-  (...args: ClientEvents[Name]): Awaitable<void>
-}
-
 /** Discord event definition. */
-export interface Event<Name extends keyof ClientEvents> {
+export interface Event<Name extends keyof ClientEvents = keyof ClientEvents> {
   /** The name of the event. */
   name: Name
 
@@ -16,5 +12,5 @@ export interface Event<Name extends keyof ClientEvents> {
   once?: boolean
 
   /** Listener function triggered when the event occurs. */
-  listener: EventListener<Name>
+  listener: (...args: ClientEvents[Name]) => Awaitable<void>
 }
