@@ -1,6 +1,6 @@
 import type {ReactionRole, ReactionRoleOption} from 'db'
 import {db} from 'db'
-import type {Client, TextChannel} from 'discord.js'
+import type {Client, Snowflake, TextChannel} from 'discord.js'
 
 /**
  * Search the database for `ReactionRoles` configurations that are missing a
@@ -64,4 +64,19 @@ export async function createReactionRoleMessage(
   console.log(
     `Added ${reactionRole.options.length} reactions to message ${message.id}`,
   )
+}
+
+/**
+ * Deletes the `ReactionRole` configuration associated with a message.
+ */
+export const deleteMessageReactionRole = async (
+  messageSnowflake: Snowflake,
+) => {
+  await db.reactionRole.delete({
+    where: {
+      messageSnowflake,
+    },
+  })
+
+  console.log(`Deleted reaction role for message ${messageSnowflake}`)
 }

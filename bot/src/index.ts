@@ -3,7 +3,9 @@ import {getToken} from './environment'
 import {events} from './events'
 import type {Event} from './types'
 
-const client = new Client({intents: [Intents.FLAGS.GUILDS]})
+const client = new Client({
+  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+})
 
 // attach our event listeners to the client
 for (const event of events) {
