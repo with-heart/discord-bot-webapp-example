@@ -1,7 +1,10 @@
 import type {NextPage} from 'next'
+import {useSession} from 'next-auth/react'
 import Head from 'next/head'
 
 const Home: NextPage = () => {
+  const session = useSession().data!
+
   return (
     <div>
       <Head>
@@ -12,6 +15,7 @@ const Home: NextPage = () => {
 
       <main>
         <h1>Discord Bot Webapp</h1>
+        <p>Hello, {session.user!.name}!</p>
       </main>
     </div>
   )
