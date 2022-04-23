@@ -14,20 +14,7 @@ module.exports = {
   rules: {
     'unicorn/no-array-reduce': ['error', {allowSimpleOperations: true}],
     'unicorn/no-null': 'off',
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        replacements: {
-          args: {
-            arguments: false,
-          },
-          db: {
-            database: false,
-          },
-        },
-        checkFilenames: false,
-      },
-    ],
+    'unicorn/prevent-abbreviations': 'off',
   },
   overrides: [
     {
