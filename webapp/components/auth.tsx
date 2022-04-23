@@ -1,8 +1,14 @@
 import {signIn, useSession} from 'next-auth/react'
-import {ReactNode} from 'react'
+import {ReactNode, useEffect} from 'react'
 
 export const Auth = ({children}: {children: ReactNode}) => {
   const {data: session} = useSession()
+
+  useEffect(() => {
+    if (session?.error === 'RefreshAccessTokenError') {
+      signIn()
+    }
+  }, [session])
 
   if (session) {
     return <>{children}</>
