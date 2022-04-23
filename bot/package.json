@@ -1,6 +1,6 @@
 {
   "name": "bot",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "deploy": "pnpm run swc scripts/deploy-commands.ts",
